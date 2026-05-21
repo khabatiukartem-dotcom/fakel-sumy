@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:fakel-sumy.vercel.app)",
+      "Bash(gh repo *)",
+      "Bash(curl -s \"https://fakel-sumy.vercel.app\")",
+      "Bash(gh api *)",
+      "Bash(find ~ -maxdepth 4 -name \"package.json\" 2>/dev/null | xargs grep -l \"fakel\\\\|sumy\\\\|Факел\" 2>/dev/null | head -5)",
+      "Read(//Users/artemkhabatiuk/**)",
+      "Bash(rsync -av --exclude='node_modules' --exclude='.git' \"/Users/artemkhabatiuk/.gemini/antigravity/scratch/fakel-sumy/\" \"/Users/artemkhabatiuk/Documents/Fakel - Sumy/\")",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial commit: fakel-sumy React/Vite source *)"
+    ]
+  }
+}
