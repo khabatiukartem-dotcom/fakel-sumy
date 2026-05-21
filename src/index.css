@@ -16,18 +16,44 @@
 
   body {
     @apply bg-[var(--bg-primary)] text-[var(--text-primary)] font-montserrat tracking-wide overflow-x-hidden;
-    /* Subtle grain texture overlay on the body using a pseudo pseudo element */
   }
 
-  /* HTML background texture setup */
   body::before {
     content: "";
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
     pointer-events: none;
     z-index: 50;
-    opacity: 0.03;
+    opacity: 0.04;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* Skip-to-content link for keyboard users */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-fire);
+    color: white;
+    padding: 8px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    z-index: 100;
+    transition: top 0.2s;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Paragraph width for readability */
+  p {
+    max-width: 70ch;
+  }
+
+  /* Text wrapping */
+  h1, h2, h3 {
+    text-wrap: balance;
   }
 }
 

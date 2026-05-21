@@ -5,7 +5,7 @@ const stats = [
   { value: '30+', label: 'Років традицій' },
   { value: '500+', label: 'Вихованців' },
   { value: '2', label: 'Зали у Сумах' },
-  { value: '🥇 Десятки', label: 'Майстрів спорту' },
+  { value: '20+', label: 'Майстрів спорту' },
 ];
 
 const Stats = () => {

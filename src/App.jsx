@@ -14,8 +14,9 @@ import LeadForm from './components/sections/LeadForm';
 function App() {
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] font-montserrat relative text-[var(--text-primary)]">
+      <a href="#main-content" className="skip-link">Перейти до вмісту</a>
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <Stats />
         <About />

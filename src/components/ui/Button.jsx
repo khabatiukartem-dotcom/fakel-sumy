@@ -7,11 +7,11 @@ export const Button = ({
   className = '', 
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-bebas tracking-widest uppercase transition-all duration-300";
-  
+  const baseStyles = "inline-flex items-center justify-center font-bebas tracking-widest uppercase transition-all duration-200 active:scale-[0.97] active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-fire)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]";
+
   const variants = {
-    primary: "bg-[var(--accent-fire)] text-white hover:bg-[#d15600] rounded-full hover:shadow-[0_0_15px_rgba(245,130,13,0.5)]",
-    outline: "border-2 border-[var(--accent-fire)] text-[var(--accent-fire)] bg-transparent hover:bg-[var(--accent-fire)] hover:text-white rounded-full",
+    primary: "bg-[var(--accent-fire)] text-white hover:bg-[#d15600] rounded-sm hover:shadow-[0_0_15px_rgba(245,130,13,0.4)]",
+    outline: "border-2 border-[var(--accent-fire)] text-[var(--accent-fire)] bg-transparent hover:bg-[var(--accent-fire)] hover:text-white rounded-sm",
     nav: "text-[var(--text-primary)] hover:text-[var(--accent-fire)] bg-transparent",
   };
 
