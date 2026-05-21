@@ -1,18 +1,12 @@
 import React from 'react';
 import { Section } from '../ui/Section';
 import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
 
 const programs = [
   {
     title: 'Дзюдо',
     age: 'від 5 років',
     desc: 'Класична японська боротьба. Розвиває гнучкість, реакцію, дисципліну та впевненість у собі. Ідеально для початківців та тих, хто прагне змагань.',
-    features: [
-      'Групи за віком і рівнем',
-      'Внутрішні та міські турніри',
-      'Кімоно видається клубом на перше заняття',
-    ],
     accent: '#F5820D',
     badgeBg: 'rgba(245,130,13,0.12)',
   },
@@ -20,11 +14,6 @@ const programs = [
     title: 'Самбо',
     age: 'від 8 років',
     desc: 'Бойове самбо — дисципліна з елементами боротьби і самозахисту. Для тих, хто хоче реальних результатів і готовий до серйозних тренувань.',
-    features: [
-      'Всеукраїнські змагання',
-      'Стипендії для спортсменів-розрядників',
-      'Тренування від майстрів спорту',
-    ],
     accent: '#C9A84C',
     badgeBg: 'rgba(201,168,76,0.12)',
   },
@@ -57,18 +46,9 @@ const Programs = () => (
             </span>
           </div>
 
-          <p className="text-[var(--text-muted)] font-montserrat text-base mb-8 leading-relaxed">
+          <p className="text-[var(--text-muted)] font-montserrat text-base leading-relaxed">
             {prog.desc}
           </p>
-
-          <ul className="space-y-3">
-            {prog.features.map((feat) => (
-              <li key={feat} className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: prog.accent }} />
-                <span className="font-montserrat text-sm text-[var(--text-primary)]">{feat}</span>
-              </li>
-            ))}
-          </ul>
         </motion.div>
       ))}
     </div>
